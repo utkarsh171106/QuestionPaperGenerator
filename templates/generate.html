@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Paper Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Question Paper Settings</h1>
+
+    <h2>Subject: {{ subject }}</h2>
+
+    <form action="/generate" method="POST">
+        <input type="hidden" name="subject" value="{{ subject }}">
+        <input type="hidden" name="syllabus" value="{{ text }}">
+
+        <input type="hidden" name="subject" value="{{ subject }}">
+
+        <br>
+
+        <label>Number of Questions</label>
+        <br><br>
+
+        <input
+            type="number"
+            name="questions"
+            min="1"
+            value="10"
+            required
+        >
+
+        <br><br>
+
+        <label>Total Marks</label>
+        <br><br>
+
+        <input
+            type="number"
+            name="marks"
+            min="1"
+            value="70"
+            required
+        >
+
+        <br><br>
+
+        <label>Exam Duration</label>
+        <br><br>
+
+        <select name="duration">
+
+            <option value="1 Hour">1 Hour</option>
+            <option value="2 Hours">2 Hours</option>
+            <option value="3 Hours" selected>3 Hours</option>
+            <option value="4 Hours">4 Hours</option>
+
+        </select>
+
+        <br><br>
+
+        <label>Difficulty</label>
+        <br><br>
+
+        <select name="difficulty">
+
+            <option value="Easy">Easy</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Hard">Hard</option>
+            <option value="Mixed">Mixed</option>
+
+        </select>
+
+        <br><br>
+
+        <label>Question Type</label>
+        <br><br>
+
+        <select name="question_type">
+
+            <option value="MCQ">MCQ</option>
+            <option value="Short Answer">Short Answer</option>
+            <option value="Long Answer">Long Answer</option>
+            <option value="Mixed" selected>Mixed</option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Generate Question Paper
+        </button>
+
+    </form>
+
+</body>
+</html>

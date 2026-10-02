@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #374151;
+}
+
+h3 {
+    margin: 20px 0 10px;
+    color: #374151;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+body > h1,
+body > p,
+body > form,
+body > h2,
+body > h3,
+body > pre,
+body > ol,
+body > hr,
+body > a,
+body > button {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    font-weight: bold;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+a {
+    text-decoration: none;
+}
+
+body > a {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+pre {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    white-space: pre-wrap;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+ol {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px 40px;
+    background: white;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+hr {
+    max-width: 900px;
+    margin: 25px auto;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    pre {
+        padding: 18px;
+        font-size: 14px;
+    }
+}
+
+@media print {
+
+    body {
+        background: white;
+        padding: 20px;
+    }
+
+    button,
+    a {
+        display: none;
+    }
+
+    form {
+        box-shadow: none;
+    }
+
+    pre {
+        box-shadow: none;
+        border: none;
+    }
+}

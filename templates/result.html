@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Paper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Question Paper</h1>
+
+    <h2>{{ subject }}</h2>
+
+    <p>
+        <strong>Time:</strong> {{ duration }}
+    </p>
+
+    <p>
+        <strong>Maximum Marks:</strong> {{ marks }}
+    </p>
+
+    <hr>
+
+    <h3>Instructions</h3>
+
+    <ol>
+        <li>Attempt all questions.</li>
+        <li>Read each question carefully.</li>
+        <li>Marks are indicated against each question.</li>
+    </ol>
+
+    <hr>
+
+    <h3>Questions</h3>
+
+    <pre>{{ result }}</pre>
+
+    <hr>
+
+    <p>
+        <strong>Difficulty:</strong> {{ difficulty }}
+    </p>
+
+    <p>
+        <strong>Question Type:</strong> {{ question_type }}
+    </p>
+
+    <br>
+    <center>
+    <button onclick="window.print()" align="center">
+        Print Question Paper
+    </button>
+    </center>
+
+    <br><br>
+
+    <a href="/">
+        <button>Generate Another</button>
+    </a>
+
+</body>
+</html>
